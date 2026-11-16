@@ -1,0 +1,127 @@
+=============
+Product stuff
+=============
+
+Products_tbl
+------------
+product_id   PK
+category_id FK
+name
+description
+product_image
+
+categories_tbl
+--------------
+categories_id PK
+categories_name
+
+product_item
+------------
+id	PK
+product_id fk
+SKU
+qty_in_stock
+product_image
+price
+
+
+========================
+shipping order
+========================
+
+shipping_order
+---------
+id	PK 
+user_id FK
+order_date 
+payment_method_id FK
+shipping_address  FK
+order_total
+order_status FK
+
+order_status
+-------------
+id	PK
+status   
+
+
+
+===========
+User table 
+===========
+
+user_tbl
+---------
+user_id PK
+user_name
+email
+password
+user_mob
+createdAt
+UpdatedAt
+
+address_tbl
+------------
+address_id   PK
+houseno
+street
+city
+state
+country
+zipcode
+country_id FK
+
+country_tbl
+-----------
+country_id   PK
+country_name
+
+
+user_payment_method
+--------------------
+id 	PK
+user_id FK
+payment_type_id  FK
+provider
+account_number
+expiry_date
+is_default
+createdAt
+updatedAt
+
+payment_type
+--------------
+id       PK
+value
+
+
+=========================
+$$$$$ Requirements $$$$$
+========================
+1. Create Accounts : Users can create and accounts and log into the website.
+2. Contact details : user can store their name and contact details.
+3. Addresses : Users can add one or more addresses to their account abd can set a default shipping address.
+4.Payment Methods : No Nessacery
+	-> users can add one or more payment methods to their account and can set a default payment method.
+5. Products : product details
+6.Categories : Each product belongs in a category and cateogries can belong to other categories.
+7. Number in Stock : The Website should keep[ track of the numbers of each product that is in stock.
+8. Shopping Cart : Visitors can add one or more products to their shopping cart as part of their shopping experience. Shopping cart are not saved in the database unless they are logged in.
+9. Payment details for Order : A user needs to provide their payment details and address details as part of placing an order.
+10. Shipping method : No required in my current project, going further we will use this.
+11. Order Status : The order and shipping process follows severals stages once the order is placed, such as processing, delivery in progress and delivered.
+
+
+
+03-Customer-API
+
+Functionallity
+--------------
+1) User can register
+
+
+2) User can login
+
+
+3) if user old password is not updated then redirect to update the password.
+	User can reset pwd (update pwd)
